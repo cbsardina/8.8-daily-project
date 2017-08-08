@@ -1,0 +1,38 @@
+header {
+  width: 86%;
+  margin: 0 auto;
+  border-bottom: solid 2px gray;
+  background-color: orange;
+}
+form {
+  padding: 1.5em 0;
+  font-size: 2em;
+}
+form input {
+  font-size: 4em;
+}
+.main {
+  width: 86%;
+  min-height: 400px;
+  margin: 0 auto;
+  background-color: yellow;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  /*align-items: center;*/
+  /*align-content: center;*/
+}
+.recipecard {
+  width: 23%;
+  margin: 1em auto;
+}
+img {
+  margin: 1em auto;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-content: center;
+}
+main h4 {
+  /*text-align: center;*/
+}
