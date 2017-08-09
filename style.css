@@ -6,7 +6,8 @@ header {
 }
 form {
   padding: 1.5em 0;
-  font-size: 2em;
+  padding-left: 1em;
+  font-size: 1.5em;
 }
 form input {
   font-size: 4em;
@@ -18,13 +19,14 @@ form input {
   background-color: yellow;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: center;
   /*align-items: center;*/
   /*align-content: center;*/
 }
-.recipecard {
+.recipeCard {
   width: 23%;
-  margin: 1em auto;
+  margin: 5px;
+  border: 2px solid blue;
 }
 img {
   margin: 1em auto;
@@ -33,6 +35,6 @@ img {
   display: flex;
   align-content: center;
 }
-main h4 {
-  /*text-align: center;*/
+.recipeCard h4 {
+  text-align: center;
 }
