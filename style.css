@@ -1,8 +1,8 @@
 header {
   width: 86%;
   margin: 0 auto;
-  border-bottom: solid 2px gray;
-  background-color: orange;
+  border-bottom: solid 2px #1B3A7D;
+  background-color: #4B7EEB;
 }
 form {
   padding: 1.5em 0;
@@ -16,12 +16,18 @@ form input {
   width: 86%;
   min-height: 400px;
   margin: 0 auto;
-  background-color: yellow;
+  background-color: #AAC1F2;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   /*align-items: center;*/
   /*align-content: center;*/
+}
+h1 {
+  margin: 10px auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .recipeCard {
   width: 23%;

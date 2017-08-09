@@ -5,7 +5,6 @@ const baseUrl = 'https://proxy.calweb.xyz/http://www.recipepuppy.com/api/';
 console.log(main);
 recipeCard.addEventListener('submit', function (event) {
 
-  let allHTML = '';
 
   event.preventDefault()
   // console.log("EVENT TARGET BELOW:");
@@ -13,6 +12,9 @@ recipeCard.addEventListener('submit', function (event) {
   // console.log("=====================");
 
   const searchWords = event.target.querySelector('input[name="searchTerm"]').value
+
+  let allHTML = `<h1 class="searchWords">Here are your search results for ${searchWords}</h1>`;
+  // let allHTML = '';
 
   // console.log("My search word: " + searchWords);
   // console.log("======================");
