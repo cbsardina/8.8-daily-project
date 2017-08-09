@@ -1,26 +1,26 @@
-const main = document.querySelector('main');
+const main = document.querySelector('.main');
 const recipeCard = document.querySelectorAll('form')[0];
 const baseUrl = 'https://proxy.calweb.xyz/http://www.recipepuppy.com/api/';
 
-
+console.log(main);
 recipeCard.addEventListener('submit', function (event) {
 
   let allHTML = '';
 
   event.preventDefault()
-  console.log("EVENT TARGET BELOW:");
-  console.log(event.target);
-  console.log("=====================");
+  // console.log("EVENT TARGET BELOW:");
+  // console.log(event.target);
+  // console.log("=====================");
 
   const searchWords = event.target.querySelector('input[name="searchTerm"]').value
 
-  console.log("My search word: " + searchWords);
-  console.log("======================");
+  // console.log("My search word: " + searchWords);
+  // console.log("======================");
 
 
   searchRecipePuppy(searchWords).then(function (results) {
-    console.log("TURN BELOW INTO A CONST");
-    console.log(results.results);
+    // console.log("TURN BELOW INTO A CONST");
+    // console.log(results.results);
 
     const loopARRAY = results.results;
 
@@ -38,15 +38,22 @@ recipeCard.addEventListener('submit', function (event) {
             </section>
             `
             return recipe;
+
         }
         allHTML += buildRecipe();
-        return allHTML;
-        main.innerHTML = allHTML;
-        // console.log("ALL HTML:");
-        // console.log(allHTML);
+
     }
+console.log(allHTML);
 
+  main.innerHTML = allHTML;
+    // let allHTML = '';
 
+    // console.log(allHTML);
+    // return allHTML;
+    // main.innerHTML = allHTML;
+    // console.log("ALL HTML:");
+    // console.log(allHTML);
+    // return main.innerHTML;
 
     // console.log("DATA OBJECT BELOW:");
     // console.log(results);
@@ -58,7 +65,7 @@ recipeCard.addEventListener('submit', function (event) {
     // console.log("allHTML BELOW:");
     // console.log(allHTML);
     // console.log(allHTML);
-    main.innerHTML = allHTML;
+
 
   })
 
