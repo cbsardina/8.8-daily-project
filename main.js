@@ -1,16 +1,31 @@
-let recipeCard = document.querySelector('.recipeCard');
-let baseUrl = 'http://crossorigin.me/http://www.recipepuppy.com/api/?q=';
+const recipeCard = document.querySelectorAll('form')[0];
+const baseUrl = 'https://proxy.calweb.xyz/http://www.recipepuppy.com/api/';
 
 
-let submit = document.querySelector('#submit');
+recipeCard.addEventListener('submit', function (event) {
+  event.preventDefault()
 
-submit.onclick = function (click) {
+  console.log(event.target);
+  const searchWords = event.target.querySelector('input[name="searchTerm"]').value
+  console.log("My search word: " + searchWords);
 
-  let search = document.querySelectorAll('recipePuppySearch');
-  // let searchArray = search.innerHTML;
-  let wordsArray = ["pizza", "biscuit"];
-  console.log(search);
-  console.log(wordsArray);
+  // searchRecipePuppy(searchWords).then(function (results) {
+  //   console.log(results);
+  //   event.target.querySelector('input[name="searchTerm"]').value = '';
+  //
+  // })
+})
+//THIS WORKS
+// let searchRecipePuppy = function(inputWords) {
+//   return fetch(`${baseUrl}?q=${encodeURIComponent(inputWords)}`).then(function(response) {
+//     return response.json();
+//   })
+// }
+// console.log(searchRecipePuppy('pizza'));
+
+
+
+
 
 // fetch(`${baseUrl}${search[0]}`)
 //   .then(
@@ -28,10 +43,6 @@ submit.onclick = function (click) {
 //   .catch(function(err) {
 //     console.log("Fetch Error :-S", err);
 //   });
-
-}
-
-
 
 //FULL CODE - ABOVE IS TESTING FETCH AND WORKING TO GET INFO FROM INPUT FIELD
 // submit.onclick = function() {
